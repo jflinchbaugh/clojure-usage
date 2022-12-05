@@ -3,12 +3,6 @@
   (:require [clojure-usage.core :refer :all]
             [nextjournal.clerk :as clerk]))
 
-(def results 
-  (->>
-    ["aoc2018" "aoc2019" "aoc2020" "aoc2021" "aoc2022"]
-    (map (partial str "/home/john/workspace/"))
-    (map (juxt identity top-usages))))
-
 (defn report [year]
   (->> year
     (str "/home/john/workspace/aoc")
