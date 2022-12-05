@@ -40,6 +40,8 @@
    ["aoc2018" "aoc2019" "aoc2020" "aoc2021" "aoc2022"]
    (map (partial str "/home/john/workspace/"))
    (map (juxt identity (partial top-usages 40))))
+  ;; I trimmed out, by hand, the symbols I know I defined,
+  ;; so it's a better representation of clojure symbols I use.
   ;; => (["/home/john/workspace/aoc2018"
   ;;      ([map 53]
   ;;       [defn 45]
