@@ -3,12 +3,14 @@
   (:require [clojure-usage.core :refer :all]
             [nextjournal.clerk :as clerk]))
 
+^{:nextjournal.clerk/no-cache true}
 (defn report [year]
   (->> year
     (str "/home/john/workspace/aoc")
-    (top-usages)
+    (top-usages 1000)
     )
   )
+
 
 ^{:nextjournal.clerk/visibility {:code :show :result :show}}
 (clerk/table (report "2022"))
