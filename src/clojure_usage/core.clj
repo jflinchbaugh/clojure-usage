@@ -23,7 +23,7 @@
       '(_ fn* :require :refer :as :all))))
 
 (defn of-interest? [s]
-  (interesting-symbols s))
+  (or (special-symbol? s) (interesting-symbols s)))
 
 (defn top-usages [top src-dir]
   (->> src-dir
